@@ -58,7 +58,7 @@ PostRouter.delete('/delete', async (req, res) => {
 
         if (findPerson.userId === loggedPerson) {
             const update = await PostModel.findByIdAndDelete({ _id: ID });
-            res.status(200).send({ msg: 'Deleted Successfully', delete: delete });
+            res.status(200).send({ msg: 'Deleted Successfully', delete: update });
         }
 
     } catch (error) {
