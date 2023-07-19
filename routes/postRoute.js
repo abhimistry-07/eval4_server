@@ -30,7 +30,7 @@ PostRouter.post('/create', async (req, res) => {
     }
 });
 
-PostRouter.patch('/update', async (req, res) => {
+PostRouter.patch('/update/:id', async (req, res) => {
     try {
         const ID = req.params.id;
         const payload = req.body;
@@ -49,7 +49,7 @@ PostRouter.patch('/update', async (req, res) => {
 })
 
 
-PostRouter.delete('/delete', async (req, res) => {
+PostRouter.delete('/delete/:id', async (req, res) => {
     try {
         const ID = req.params.id;
 
